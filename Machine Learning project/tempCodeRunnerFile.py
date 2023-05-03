@@ -1,0 +1,1 @@
+plt.pie(df['tar'].value_counts(),labels=['ham','spam'],autopct="%0.2f")
