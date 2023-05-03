@@ -1,0 +1,30 @@
+{% load static %}
+
+<div class="mt-4" style="background-color: black; width:100%; height:350px">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mt-3">
+            <h3> <span style="color : rgb(110, 15, 15)">Contact Information</h3>
+            <p style ="color:white;font-size:18px"><i class="fa fa-map-marker text-danger"></i> Hyderabad </p>
+            <p style ="color:white;font-size:18px"><i class="fa fa-envelope text-danger"></i> b200065@nitsikkim.ac.in</p>
+            <p style ="color:white;font-size:18px"><i class="fa fa-mobile text-danger"></i> P: +91 9392484584  /  +91 8918864757</p>
+            <p style ="color:white;font-size:18px"><i class="fa fa-globe text-danger"></i> www.anvithasoftwares.com</p>
+        </div>
+        <div class="col-md-4 mt-3">
+            <h3 ><span style="color : rgb(110, 15, 15)">Online Placements</span></h3>
+            <p style ="color:white;font-size:18px">Online placement- Your Gateway To A Global Career Make it happen today About us, We offer online & onsite internship & placement matching services to university students and young professionals - who would like to gain international working experience and become more employable in the future - with one of our host companies in Asia.</p>
+           
+        </div>
+        <div class="col-md-4 mt-3">
+            <h3><span style="color : rgb(110, 15, 15)">Newsletter</span></h3>
+            <p style ="color:white;font-size:18px">If you want the any extra information then send your email ID</p>
+            <form method="post" class="form-inline">
+                {% csrf_token %}
+                  <input type="email" name="emailid" placeholder="Email ID" required class="form-control mr-2" style= color:black;background:white>
+                  <input type="submit" value="Send" class="btn btn-primary" style= color:black;background:white >
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>

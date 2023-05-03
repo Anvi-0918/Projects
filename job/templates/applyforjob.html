@@ -1,0 +1,54 @@
+{% load static %}
+
+{% block body %}
+
+
+{% include 'user_navigation.html' %}
+<style>
+    tr-{text-align:center}
+</style>
+<marquee style="font-family:monospace;font-size:25px;color:black;font-weight:bold;margin-top:1%">
+    Apply for job
+</marquee>
+<hr>
+<div class="container shadow-lg mb-2">
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<div class="form-row">
+     <label class ="forn-weight-bold">Write proficiency</label>
+     <input type="text" class="form-control" name="proficiency">
+     </div>
+     <input type="submit" value="Submit" class="btn" style="margin-top:2%;color:white;background:black">
+    </div>
+</form>
+
+
+{% if error == "close" %}
+    <script>
+     alert("Application is closed");
+     window.location=('{% url "user_latestjobs" %}')
+    </script>
+{% endif %}
+
+{% if error == "notopen" %}
+    <script>
+     alert("Application hasn't opened yet");
+     window.location=('{% url "user_latestjobs" %}')
+    </script>
+{% endif %}
+
+{% if error == "done" %}
+    <script>
+     alert(" Job Application submitted successful");
+     window.location=('{% url "user_latestjobs" %}')
+    </script>
+{% endif %}
+
+{% if error == "yes" %}
+    <script>
+     alert("Signup Unsuccessful");
+    </script>
+{% endif %}
+
+{% endblock %}
+
